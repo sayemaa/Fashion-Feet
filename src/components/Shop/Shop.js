@@ -38,6 +38,10 @@ const Shop = () => {
         }
     }
 
+    const handleChooseAgain = () => {
+        setCart([]);
+    }
+
     return (
         <div>
             <Container className="my-4" >
@@ -59,7 +63,7 @@ const Shop = () => {
                             }
                             <div className='d-flex justify-content-center'>
                                 <Button onClick={() => handleChooseOne(carts)} id="choose-one-btn" className='me-2' variant="btn btn-outline-dark">Choose One</Button>
-                                <Button id="choose-again-btn" variant="btn btn-outline-dark">Choose Again</Button>
+                                <Button onClick={handleChooseAgain} id="choose-again-btn" variant="btn btn-outline-dark">Choose Again</Button>
                             </div>
                         </div>
                     </Col>
