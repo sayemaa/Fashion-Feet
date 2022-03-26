@@ -6,11 +6,11 @@ const Header = () => {
         <div>
             <Navbar bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Navbar.Brand href="#home">Fashion Feet</Navbar.Brand>
                     <Nav className="me-6">
                         <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <Nav.Link href="#Shop">Shop</Nav.Link>
+                        <Nav.Link href="#about">About</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

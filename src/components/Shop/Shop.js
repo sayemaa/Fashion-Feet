@@ -1,3 +1,4 @@
+import { Button } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Cart from '../Cart/Cart';
@@ -16,7 +17,25 @@ const Shop = () => {
 
     const handleAddToCart = (shoe) => {
         const newCart = [...carts, shoe]
-        setCart(newCart);
+        if (newCart.length <= 4) {
+            setCart(newCart);
+        }
+        document.getElementById('choose-one-btn').style.display = "block"
+        document.getElementById('choose-again-btn').style.display = "block"
+    }
+
+    const handleChooseOne = (carts) => {
+        // console.log(carts)
+        const arrayId = [];
+        let randomChoose;
+        for (const cart of carts) {
+            // console.log(cart)
+            arrayId.push(parseInt(cart.id));
+            randomChoose = arrayId[Math.floor(Math.random() * arrayId.length)];
+            if (randomChoose === parseInt(cart.id)) {
+                setCart([cart]);
+            }
+        }
     }
 
     return (
@@ -32,12 +51,16 @@ const Shop = () => {
                             }
                         </div>
                     </Col>
-                    <Col sm={3}>
+                    <Col sm={3} >
                         <h3>Cart</h3>
                         <div className='mt-4'>
                             {
                                 carts.map(cart => <Cart cart={cart} key={cart.id}></Cart>)
                             }
+                            <div className='d-flex justify-content-center'>
+                                <Button onClick={() => handleChooseOne(carts)} id="choose-one-btn" className='me-2' variant="btn btn-outline-dark">Choose One</Button>
+                                <Button id="choose-again-btn" variant="btn btn-outline-dark">Choose Again</Button>
+                            </div>
                         </div>
                     </Col>
                 </Row>
