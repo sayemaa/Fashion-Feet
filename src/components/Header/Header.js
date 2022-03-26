@@ -8,9 +8,9 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand href="#home">Fashion Feet</Navbar.Brand>
                     <Nav className="me-6">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#Shop">Shop</Nav.Link>
-                        <Nav.Link href="#about">About</Nav.Link>
+                        <Nav.Link className='me-2' href="#home">Home</Nav.Link>
+                        <Nav.Link className='me-2' href="#Shop">Shop</Nav.Link>
+                        <Nav.Link className='me-2' href="#about">About</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

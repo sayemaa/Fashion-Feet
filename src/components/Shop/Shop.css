@@ -1,9 +1,20 @@
-.shoes-container {
+.shoes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
+    justify-items: center;
 }
 
 #choose-one-btn, #choose-again-btn {
     display: none;
+}
+
+@media only screen and (max-width: 688px) {
+    .shoes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .shop-container {
+        flex-direction: column-reverse;
+    }
 }
