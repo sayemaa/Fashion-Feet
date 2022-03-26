@@ -1,2 +1,2 @@
 # Fashion Feet
-Live Website: [Fashion Feet](https://github.com/facebook/create-react-app).
+Live Website: [Fashion Feet](https://react-fashion-feet.netlify.app/).
