@@ -21,8 +21,10 @@ const Shop = () => {
         if (newCart.length <= 4) {
             setCart(newCart);
         }
+        document.getElementById('cart-container').style.display = "block"
         document.getElementById('choose-one-btn').style.display = "block"
         document.getElementById('choose-again-btn').style.display = "block"
+
     }
 
     const handleChooseOne = (carts) => {
@@ -58,7 +60,7 @@ const Shop = () => {
                             }
                         </div>
                     </Col>
-                    <Col sm={3} className='cart-container mb-5'>
+                    <Col sm={3} id="cart-container" className='cart-container mb-5'>
                         <h3>Cart</h3>
                         <div className=' mt-4'>
                             {

@@ -17,4 +17,8 @@
     .shop-container {
         flex-direction: column-reverse;
     }
+
+    .cart-container {
+        display: none;
+    }
 }
